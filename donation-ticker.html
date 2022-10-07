@@ -120,7 +120,7 @@
 					return incentive != null ? incentive.description : ""
 				},
 				cacheIncentives() {
-					axios.get(api + resource + '/' + resourceID + '/incentives')
+					axios.get(window.config.api + window.config.resource + '/' + window.config.resourceID + '/incentives')
 						.then((response) => {
 							this.incentives = response.data;
 						})
