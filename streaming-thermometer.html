@@ -24,8 +24,8 @@
 							</ul>
 						</div>
 						<div class="progress">
-							<div class="progress-bar progress-bar-grow bg-blue" role="progressbar" v-bind:style="{ width: ((entity.sumDonations / entity.fundraisingGoal) * 100) + '%' }">
-								{{ entity.sumDonations | formatMoney }} / {{ entity.fundraisingGoal | formatMoney }}
+							<div class="progress-bar" role="progressbar" aria-valuenow="{width: ((entity.sumDonations / entity.fundraisingGoal) * 100) + '%' }" aria-valuemin="0" aria-valuemax="100" v-bind:style="{width: ((entity.sumDonations / entity.fundraisingGoal) * 100) + '%' }">
+							  <span class="show">{{ entity.sumDonations | formatMoney }} / {{ entity.fundraisingGoal | formatMoney }}</span>
 							</div>
 						</div>
 					</div>
